@@ -176,12 +176,13 @@ def probe_cmd(chunk: Chunk, q, ffmpeg_pipe, encoder, probing_rate,
             '--enable-angle-delta=0', '--reduced-tx-type-set=1',
             '--enable-dual-filter=0', '--enable-intra-edge-filter=0',
             '--enable-order-hint=0', '--enable-flip-idtx=0',
-            '--enable-dist-wtd-comp=0', '--enable-rect-tx=0',
+            '--enable-dist-wtd-comp=0',
             '--enable-interintra-wedge=0', '--enable-onesided-comp=0',
             '--enable-interintra-comp=0', '--enable-global-motion=0',
             '--min-partition-size=32', '--max-partition-size=32', 
             '--max-reference-frames=3', '-cdf-update-mode=2',
-            '--deltaq-mode=0', '--sb-size=64'
+            '--deltaq-mode=0', '--sb-size=64',
+            '--arnr-strength=6'
         ]
         cmd = CommandPair(pipe, [*params, '-o', probe_name, '-'])
 
