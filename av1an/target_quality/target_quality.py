@@ -170,7 +170,6 @@ def probe_cmd(chunk: Chunk, q, ffmpeg_pipe, encoder, probing_rate,
             'aomenc', '--passes=1', f'--threads={n_threads}',
             '--tile-columns=2', '--tile-rows=1', '--end-usage=q', '-b', '8',
             '--cpu-used=6', f'--cq-level={q}',
-            '--min-partition-size=32', '--max-partition-size=32', 
             '--deltaq-mode=0', '--sb-size=64',
             '--arnr-strength=6'
         ]
