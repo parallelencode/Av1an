@@ -168,7 +168,7 @@ def probe_cmd(chunk: Chunk, q, ffmpeg_pipe, encoder, probing_rate,
     if encoder == 'aom':
         params = [
             'aomenc', '--passes=1', f'--threads={n_threads}',
-            '--tile-columns=2', '--tile-rows=1', '--end-usage=q', '-b', '8',
+            '--tile-columns=2', '--tile-rows=1', '--end-usage=q', '-b', '10',
             '--cpu-used=6', f'--cq-level={q}'
         ]
         cmd = CommandPair(pipe, [*params, '-o', probe_name, '-'])
